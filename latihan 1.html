@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <!-- Link ke file CSS -->
+    <link rel="stylesheet" href="latihan.css">
+</head>   
+
+<body>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="#">egisaja123</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Log</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="background">
+        <div class="posisi">
+            <h1>Tutorial Simple Membuat Hati Mbak Njull  Senang Pesanku: jangan lupa semangat hafalannya ya🫰🫰🫶💪💪</h1>
+            <h2>Menggunakan HTML & CSS</h2>
+            <p>Terima kasih sudah melihat karya saya<br>
+                dengan ini saya ucapkan terima kasih banyak</p>
+            <div class="tombol">
+                <button>Jelajahi</button>
+                <button>Berlangganan</button>
+            </div>
+        </div>
+    </div><!-- Modal -->
+    <div id="jelajahiModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Konten untuk Jelajahi</p>
+        </div>
+    </div>
+    
+    <script>
+        // Modal Script
+        var modal = document.getElementById('jelajahiModal');
+        var btn = document.getElementById('jelajahiButton');
+        var span = document.getElementsByClassName('close')[0];
+    
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    <!-- Style for Modal -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+    
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+    
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
